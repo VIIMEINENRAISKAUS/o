@@ -1,44 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 <head>
-<meta charset="UTF-8">
-<title>Fullscreen Video</title>
-<style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background: black;
-        overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <title>Koko Näytön Kuva</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: black;
+        }
 
-    video {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
-</style>
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain; /* Vaihda cover jos haluat täyttää koko ruudun rajaten */
+            display: block;
+        }
+    </style>
 </head>
 <body>
-
-<video id="video" autoplay muted playsinline>
-    <source src="https://vidcont.life/zoopornshow/mp4/maledog_1018-02.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-<script>
-    const video = document.getElementById("video");
-
-    video.addEventListener("loadeddata", () => {
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
-        } else if (video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen();
-        } else if (video.msRequestFullscreen) {
-            video.msRequestFullscreen();
-        }
-    });
-</script>
-
+    <img src="Screenshot_20260303_090044_Gallery.png" alt="Screenshot">
 </body>
 </html>
